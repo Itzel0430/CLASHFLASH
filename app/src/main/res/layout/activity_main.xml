@@ -22,7 +22,8 @@
         app:layout_constraintHorizontal_bias="0.759"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
+        app:layout_constraintVertical_bias="0.633"
+        android:onClick="btnabc"/>
 
     <Button
         android:id="@+id/btn2"
@@ -39,7 +40,8 @@
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
+        app:layout_constraintVertical_bias="0.633"
+        android:onClick="btncontar"/>
 
     <Button
         android:id="@+id/btn"
@@ -56,7 +58,8 @@
         app:layout_constraintHorizontal_bias="0.759"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
+        app:layout_constraintVertical_bias="0.361"
+        android:onClick="btncolores"/>
 
     <Button
         android:id="@+id/btn1234"
@@ -73,6 +76,7 @@
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
+        app:layout_constraintVertical_bias="0.361"
+        android:onClick="btnnumeros"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
