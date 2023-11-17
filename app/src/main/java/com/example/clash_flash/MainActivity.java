@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Configurar el OnClickListener para el botón
         vistNum.setOnClickListener(view -> {
+
             // Crear un Intent para la otra pantalla
             Intent intent = new Intent(MainActivity.this, num_uno.class);
 
