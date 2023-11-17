@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/amarillo">
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/btnAudioAma"
         android:layout_width="87dp"
         android:layout_height="87dp"
         android:src="@drawable/baseline_volume_up_24"
@@ -14,10 +15,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.657"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877" />
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/btnHome"
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:src="@drawable/baseline_home_24"
@@ -27,9 +30,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877"
+        android:background="@android:color/transparent"
         tools:layout_editor_absoluteX="640dp" />
 
     <ImageButton
+        android:id="@+id/btnback"
         android:layout_width="84dp"
         android:layout_height="155dp"
         android:src="@drawable/baseline_arrow_back_ios_24"
@@ -43,7 +48,7 @@
         android:onClick="onButtonClick"/>
 
     <ImageButton
-        android:id="@+id/btnaudio"
+        android:id="@+id/btnnext"
         android:layout_width="84dp"
         android:layout_height="155dp"
         android:src="@drawable/baseline_arrow_forward_ios_24"

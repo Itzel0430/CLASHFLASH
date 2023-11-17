@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/c">
 
-    <ImageView
+    <ImageButton
+
         android:layout_width="87dp"
         android:layout_height="87dp"
         android:src="@drawable/baseline_volume_up_24"
@@ -15,9 +16,10 @@
         app:layout_constraintHorizontal_bias="0.657"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintVertical_bias="0.877"
+        android:background="@android:color/transparent"/>
 
-    <ImageView
+    <ImageButton
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:src="@drawable/baseline_home_24"
@@ -27,7 +29,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877"
-        tools:layout_editor_absoluteX="640dp" />
+        tools:layout_editor_absoluteX="640dp"
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:layout_width="84dp"

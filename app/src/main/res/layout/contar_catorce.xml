@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/contar14">
 
-    <ImageView
+    <ImageButton
         android:layout_width="87dp"
         android:layout_height="87dp"
         android:src="@drawable/baseline_volume_up_24"
@@ -15,9 +15,10 @@
         app:layout_constraintHorizontal_bias="0.657"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
         app:layout_constraintVertical_bias="0.877" />
 
-    <ImageView
+    <ImageButton
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:src="@drawable/baseline_home_24"
@@ -27,6 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.877"
+        android:background="@android:color/transparent"
         tools:layout_editor_absoluteX="640dp" />
 
     <ImageButton
@@ -55,6 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.479"
+
         tools:layout_editor_absoluteX="284dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
