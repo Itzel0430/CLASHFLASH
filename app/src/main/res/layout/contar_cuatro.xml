@@ -6,19 +6,38 @@
     android:layout_height="match_parent"
     android:background="@drawable/contar4">
 
-    <ImageButton
-        android:layout_width="87dp"
-        android:layout_height="87dp"
-        android:src="@drawable/baseline_volume_up_24"
+    <EditText
+        android:id="@+id/editTextNumerico"
+        android:layout_width="220dp"
+        android:layout_height="46dp"
+        android:hint="Respuesta"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@android:color/transparent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintVertical_bias="0.737" />
+
+    <Button
+        android:id="@+id/botonEjemplo"
+        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPROBAR"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/blueligth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83"
+        android:onClick="validarRespuesta"/>
+
 
     <ImageButton
+        android:id="@+id/btnhoome"
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:src="@drawable/baseline_home_24"

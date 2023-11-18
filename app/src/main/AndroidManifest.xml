@@ -27,6 +27,13 @@
         <activity android:name=".contar_dos"/>
         <activity android:name=".color_ama"/>
         <activity android:name=".letra_a"/>
+        <activity android:name=".contar_cuatro"/>
+        <activity android:name=".contar_seis"/>
+        <activity android:name=".contar_ocho"/>
+        <activity android:name=".contar_diez"/>
+        <activity android:name=".contar_doce"/>
+        <activity android:name=".contar_catorce"/>
+
 
     </application>
 

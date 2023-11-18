@@ -4,23 +4,20 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class contar_dos extends AppCompatActivity {
-    private static final String RESPUESTA_CORRECTA = "2";
+public class contar_cuatro extends AppCompatActivity {
+    private static final String RESPUESTA_CORRECTA = "4";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contar_dos);
+        setContentView(R.layout.contar_cuatro);
 
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
 
     }
+
     public void validarRespuesta(View view) {
         // Obtener el valor del EditText
         EditText editTextRespuesta = findViewById(R.id.editTextNumerico);
@@ -39,4 +36,5 @@ public class contar_dos extends AppCompatActivity {
     private void mostrarMensaje(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
+
 }

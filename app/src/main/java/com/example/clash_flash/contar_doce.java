@@ -1,4 +1,5 @@
 package com.example.clash_flash;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -7,15 +8,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class contar_dos extends AppCompatActivity {
-    private static final String RESPUESTA_CORRECTA = "2";
+public class contar_doce extends AppCompatActivity {
+    private static final String RESPUESTA_CORRECTA = "12";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contar_dos);
+        setContentView(R.layout.contar_diez);
 
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
