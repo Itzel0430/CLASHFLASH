@@ -18,7 +18,7 @@ public class contar_doce extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contar_diez);
+        setContentView(R.layout.contar_doce);
 
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
