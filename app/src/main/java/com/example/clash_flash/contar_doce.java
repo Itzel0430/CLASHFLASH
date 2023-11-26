@@ -10,8 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class contar_diez extends AppCompatActivity {
-    private static final String RESPUESTA_CORRECTA = "10";
+public class contar_doce extends AppCompatActivity {
+    private static final String RESPUESTA_CORRECTA = "12";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -23,15 +23,15 @@ public class contar_diez extends AppCompatActivity {
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
 
+
         ImageButton btnAnterior = findViewById(R.id.btnatras);
         ImageButton btnSiguiente = findViewById(R.id.btnsig);
-
 
         init.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //home
-                Intent intent = new Intent(contar_diez.this, MainActivity.class);
+                Intent intent = new Intent(contar_doce.this, MainActivity.class);
 
                 // Limpiar la pila de actividades para que MainActivity sea la nueva actividad principal
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -44,7 +44,7 @@ public class contar_diez extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Cambiar a ActivityAnterior
-                Intent intent = new Intent(contar_diez.this, contar_ocho.class);
+                Intent intent = new Intent(contar_doce.this, contar_diez.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class contar_diez extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Cambiar a ActivitySiguiente
-                Intent intent = new Intent(contar_diez.this,contar_doce.class);
+                Intent intent = new Intent(contar_doce.this,contar_catorce.class);
                 startActivity(intent);
             }
         });
@@ -79,4 +79,3 @@ public class contar_diez extends AppCompatActivity {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
 }
-
