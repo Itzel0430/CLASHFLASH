@@ -42,7 +42,7 @@ public class color_naranja  extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Cambiar a ActivityAnterior
-                Intent intent = new Intent(color_naranja.this, color_naranja.class);
+                Intent intent = new Intent(color_naranja.this, color_verde.class);
                 startActivity(intent);
             }
         });
