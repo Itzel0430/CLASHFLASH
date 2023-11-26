@@ -1,25 +1,26 @@
 package com.example.clash_flash;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class letra_a extends AppCompatActivity {
+public class letra_w extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private ImageButton btnAudio;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.letra_a);
+        setContentView(R.layout.letra_w);
 
         ImageButton hm =findViewById(R.id.hm);
         hm.setOnClickListener(view -> finish());
 
 
         // Inicializar el MediaPlayer con el archivo de audio
-        mediaPlayer = MediaPlayer.create(this, R.raw.a_arania);
-        btnAudio = findViewById(R.id.btnAudioA);
+        mediaPlayer = MediaPlayer.create(this, R.raw.w_wapiti);
+        btnAudio = findViewById(R.id.btnAudioW);
         btnAudio.setOnClickListener(view -> {
             if(mediaPlayer.isPlaying()){
                 mediaPlayer.pause();

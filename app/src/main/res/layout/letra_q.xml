@@ -8,7 +8,8 @@
 
 
     <ImageButton
-        android:id="@+id/imageView"
+
+        android:id="@+id/btnAudioQ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.657"
@@ -21,6 +22,7 @@
         android:background="@android:color/transparent"/>
 
     <ImageButton
+        android:id="@+id/hm"
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:src="@drawable/baseline_home_24"

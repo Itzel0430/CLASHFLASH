@@ -7,6 +7,7 @@
     android:background="@drawable/f">
 
     <ImageButton
+        android:id="@+id/btnAudioF"
         android:layout_width="87dp"
         android:layout_height="87dp"
         android:src="@drawable/baseline_volume_up_24"
@@ -19,6 +20,7 @@
         android:background="@android:color/transparent"/>
 
     <ImageButton
+        android:id="@+id/hm"
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:src="@drawable/baseline_home_24"

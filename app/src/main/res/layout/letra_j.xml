@@ -7,6 +7,8 @@
     android:background="@drawable/j">
 
     <ImageButton
+
+        android:id="@+id/btnAudioJ"
         android:background="@android:color/transparent"
         android:layout_width="87dp"
         android:layout_height="87dp"
@@ -19,6 +21,7 @@
         app:layout_constraintVertical_bias="0.877" />
 
     <ImageButton
+        android:id="@+id/hm"
         android:background="@android:color/transparent"
         android:layout_width="80dp"
         android:layout_height="85dp"

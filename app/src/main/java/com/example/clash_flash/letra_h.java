@@ -5,21 +5,21 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class letra_a extends AppCompatActivity {
+public class letra_h extends AppCompatActivity{
     private MediaPlayer mediaPlayer;
     private ImageButton btnAudio;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.letra_a);
+        setContentView(R.layout.letra_h);
 
         ImageButton hm =findViewById(R.id.hm);
         hm.setOnClickListener(view -> finish());
 
 
         // Inicializar el MediaPlayer con el archivo de audio
-        mediaPlayer = MediaPlayer.create(this, R.raw.a_arania);
-        btnAudio = findViewById(R.id.btnAudioA);
+        mediaPlayer = MediaPlayer.create(this, R.raw.h_hormiga);
+        btnAudio = findViewById(R.id.btnAudioH);
         btnAudio.setOnClickListener(view -> {
             if(mediaPlayer.isPlaying()){
                 mediaPlayer.pause();
@@ -36,4 +36,5 @@ public class letra_a extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
 }
