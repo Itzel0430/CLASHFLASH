@@ -53,7 +53,7 @@ public class contar_diez extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Cambiar a ActivitySiguiente
-                Intent intent = new Intent(contar_diez.this,contar_doce.class);
+                Intent intent = new Intent(contar_diez.this,contar_diez.class);
                 startActivity(intent);
             }
         });

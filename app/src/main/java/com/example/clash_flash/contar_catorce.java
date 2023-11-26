@@ -43,7 +43,7 @@ public class contar_catorce extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Cambiar a ActivityAnterior
-                Intent intent = new Intent(contar_catorce.this, contar_doce.class);
+                Intent intent = new Intent(contar_catorce.this, contar_diez.class);
                 startActivity(intent);
             }
         });
