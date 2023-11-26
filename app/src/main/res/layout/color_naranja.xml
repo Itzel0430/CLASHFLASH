@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.476" />
 
     <ImageButton
-        android:id="@+id/btnatras"
+        android:id="@+id/btnsig"
         android:layout_width="59dp"
         android:layout_height="81dp"
         android:src="@drawable/baseline_arrow_forward_ios_24"

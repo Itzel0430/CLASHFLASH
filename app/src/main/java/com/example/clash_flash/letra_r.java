@@ -23,6 +23,17 @@ public class letra_r extends AppCompatActivity {
         ImageButton btnAnterior = findViewById(R.id.btnatras);
         ImageButton btnSiguiente = findViewById(R.id.btnsig);
 
+        hm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //home
+                Intent intent = new Intent(letra_r.this, MainActivity.class);
+
+                // Limpiar la pila de actividades para que MainActivity sea la nueva actividad principal
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
 
         btnAnterior.setOnClickListener(new View.OnClickListener() {
             @Override

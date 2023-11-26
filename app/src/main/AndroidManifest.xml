@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CLASH_FLASH"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".inicio"
 
 
 
@@ -26,6 +26,8 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".MainActivity"/>
         <activity android:name=".color_ama"/>
         <activity android:name=".color_azul" />
         <activity android:name=".color_morado" />
@@ -60,14 +62,27 @@
         <activity android:name=".letra_x"/>
         <activity android:name=".letra_y"/>
         <activity android:name=".letra_z"/>
+
+        <activity android:name=".contar_dos"/>
         <activity android:name=".contar_cuatro"/>
         <activity android:name=".contar_seis"/>
         <activity android:name=".contar_ocho"/>
         <activity android:name=".contar_diez"/>
         <activity android:name=".contar_doce"/>
         <activity android:name=".contar_catorce"/>
+
         <activity android:name=".num_uno" />
-        <activity android:name=".contar_dos"/>
+        <activity android:name=".num_dos" />
+        <activity android:name=".num_tres" />
+        <activity android:name=".num_cuatro" />
+        <activity android:name=".num_cinco" />
+        <activity android:name=".num_seis" />
+        <activity android:name=".num_siete" />
+        <activity android:name=".num_ocho" />
+        <activity android:name=".num_nueve" />
+        <activity android:name=".num_diez" />
+
+
 
 
 
