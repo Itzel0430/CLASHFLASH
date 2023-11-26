@@ -7,6 +7,7 @@
     android:background="@drawable/numero3">
 
     <ImageButton
+        android:id="@+id/btnAudioTres"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.657"
@@ -21,7 +22,7 @@
         tools:layout_editor_absoluteY="585dp" />
 
     <ImageButton
-        android:id="@+id/imageView"
+        android:id="@+id/hm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"

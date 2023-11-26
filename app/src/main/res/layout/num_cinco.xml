@@ -8,6 +8,7 @@
 
 
     <ImageButton
+        android:id="@+id/btnAudioCinco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.657"
@@ -22,7 +23,7 @@
         android:background="@android:color/transparent"/>
 
     <ImageButton
-        android:id="@+id/imageView"
+        android:id="@+id/hm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
