@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class color_verde extends AppCompatActivity {
-    public class color_ama extends AppCompatActivity {
+
         private MediaPlayer mediaPlayer;
         private ImageButton btnAudio;
 
@@ -81,4 +81,3 @@ public class color_verde extends AppCompatActivity {
             super.onDestroy();
         }
     }
-}

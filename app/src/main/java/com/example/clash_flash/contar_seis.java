@@ -1,6 +1,7 @@
 package com.example.clash_flash;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -12,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class contar_seis extends AppCompatActivity {
     private static final String RESPUESTA_CORRECTA = "6";
+    private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -67,12 +70,14 @@ public class contar_seis extends AppCompatActivity {
         // Verificar si la respuesta ingresada es correcta
         if (respuestaUsuario.equalsIgnoreCase(RESPUESTA_CORRECTA)) {
             // La respuesta es correcta
+            
             mostrarMensaje("¡Respuesta Correcta!");
         } else {
             // La respuesta es incorrecta
             mostrarMensaje("Respuesta Incorrecta, intenta de nuevo.");
         }
     }
+
 
     private void mostrarMensaje(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
