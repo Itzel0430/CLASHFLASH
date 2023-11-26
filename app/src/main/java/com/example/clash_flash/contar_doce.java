@@ -1,17 +1,19 @@
 package com.example.clash_flash;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class contar_doce extends AppCompatActivity {
     private static final String RESPUESTA_CORRECTA = "12";
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
 
 
 
@@ -20,6 +22,30 @@ public class contar_doce extends AppCompatActivity {
 
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
+
+
+        ImageButton btnAnterior = findViewById(R.id.btnatras);
+        ImageButton btnSiguiente = findViewById(R.id.btnsig);
+
+
+        btnAnterior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Cambiar a ActivityAnterior
+                Intent intent = new Intent(contar_doce.this, contar_diez.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSiguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Cambiar a ActivitySiguiente
+                Intent intent = new Intent(contar_doce.this,contar_catorce.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
     public void validarRespuesta(View view) {

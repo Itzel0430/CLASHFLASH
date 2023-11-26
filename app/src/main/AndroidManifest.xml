@@ -25,23 +25,51 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".num_uno" />
-        <activity android:name=".contar_dos"/>
+
         <activity android:name=".color_ama"/>
         <activity android:name=".color_azul" />
         <activity android:name=".color_morado" />
         <activity android:name=".color_naranja" />
         <activity android:name=".color_rojo" />
         <activity android:name=".color_verde" />
+
         <activity android:name=".letra_a"/>
+        <activity android:name=".letra_b"/>
+        <activity android:name=".letra_c"/>
+        <activity android:name=".letra_d"/>
+        <activity android:name=".letra_e"/>
+        <activity android:name=".letra_f"/>
+        <activity android:name=".letra_g"/>
+        <activity android:name=".letra_h"/>
+        <activity android:name=".letra_i"/>
+        <activity android:name=".letra_j"/>
+        <activity android:name=".letra_k"/>
+        <activity android:name=".letra_l"/>
+        <activity android:name=".letra_m"/>
+        <activity android:name=".letra_n"/>
+        <activity android:name=".letra_enie"/>
+        <activity android:name=".letra_o"/>
+        <activity android:name=".letra_p"/>
+        <activity android:name=".letra_q"/>
+        <activity android:name=".letra_r"/>
+        <activity android:name=".letra_t"/>
+        <activity android:name=".letra_s"/>
+        <activity android:name=".letra_u"/>
+        <activity android:name=".letra_v"/>
+        <activity android:name=".letra_w"/>
+        <activity android:name=".letra_x"/>
+        <activity android:name=".letra_y"/>
+        <activity android:name=".letra_z"/>
         <activity android:name=".contar_cuatro"/>
         <activity android:name=".contar_seis"/>
         <activity android:name=".contar_ocho"/>
         <activity android:name=".contar_diez"/>
         <activity android:name=".contar_doce"/>
         <activity android:name=".contar_catorce"/>
+        <activity android:name=".num_uno" />
+        <activity android:name=".contar_dos"/>
 
-        <activity android:name=".ActivitySiguiente" />
+
 
 
     </application>

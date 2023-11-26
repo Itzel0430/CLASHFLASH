@@ -18,7 +18,7 @@ public class color_verde extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.color_verde);
 
-            ImageButton home = findViewById(R.id.btnHome);
+            ImageButton home = findViewById(R.id.hm);
 
             home.setOnClickListener(view -> finish());
 
