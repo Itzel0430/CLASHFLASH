@@ -37,7 +37,7 @@
         android:background="@android:color/transparent"/>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnatras"
         android:layout_width="84dp"
         android:layout_height="155dp"
         android:background="@android:color/transparent"
@@ -52,7 +52,7 @@
         tools:layout_editor_absoluteX="3dp" />
 
     <ImageButton
-        android:id="@+id/btnaudio"
+        android:id="@+id/btnsig"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.977"

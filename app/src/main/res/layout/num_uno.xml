@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.877" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnatras"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.022"
@@ -55,7 +55,7 @@
 
     <ImageButton
 
-
+        android:id="@+id/btnsig"
         android:layout_width="84dp"
         android:layout_height="155dp"
         android:background="@android:color/transparent"

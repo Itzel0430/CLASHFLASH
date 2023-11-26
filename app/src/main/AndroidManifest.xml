@@ -16,6 +16,8 @@
             android:name=".MainActivity"
 
 
+
+
         android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +28,11 @@
         <activity android:name=".num_uno" />
         <activity android:name=".contar_dos"/>
         <activity android:name=".color_ama"/>
+        <activity android:name=".color_azul" />
+        <activity android:name=".color_morado" />
+        <activity android:name=".color_naranja" />
+        <activity android:name=".color_rojo" />
+        <activity android:name=".color_verde" />
         <activity android:name=".letra_a"/>
         <activity android:name=".contar_cuatro"/>
         <activity android:name=".contar_seis"/>
@@ -33,6 +40,8 @@
         <activity android:name=".contar_diez"/>
         <activity android:name=".contar_doce"/>
         <activity android:name=".contar_catorce"/>
+
+        <activity android:name=".ActivitySiguiente" />
 
 
     </application>

@@ -35,6 +35,7 @@
          />
 
     <ImageButton
+        android:id="@+id/btnatras"
         android:layout_width="84dp"
         android:layout_height="155dp"
         android:src="@drawable/baseline_arrow_back_ios_24"
@@ -48,7 +49,7 @@
         android:onClick="onButtonClick"/>
 
     <ImageButton
-        android:id="@+id/btnaudio"
+        android:id="@+id/btnsig"
         android:layout_width="84dp"
         android:layout_height="155dp"
         android:background="@android:color/transparent"

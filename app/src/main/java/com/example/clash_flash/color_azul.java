@@ -1,8 +1,11 @@
 package com.example.clash_flash;
+import android.content.Intent;
 import android.os.Bundle;
 import android.media.MediaPlayer;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class color_azul  extends AppCompatActivity {
@@ -12,13 +15,36 @@ public class color_azul  extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.color_azul);
 
         ImageButton home = findViewById(R.id.btnHome);
 
         home.setOnClickListener(view -> finish());
+
+        ImageButton btnAnterior = findViewById(R.id.btnatras);
+        ImageButton btnSiguiente = findViewById(R.id.btnsig);
+
+
+        btnAnterior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Cambiar a ActivityAnterior
+                Intent intent = new Intent(color_azul.this, color_ama.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSiguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Cambiar a ActivitySiguiente
+                Intent intent = new Intent(color_azul.this,color_rojo.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         // Inicializar el MediaPlayer con el archivo de audio
