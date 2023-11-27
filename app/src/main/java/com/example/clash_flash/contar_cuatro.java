@@ -1,5 +1,6 @@
 package com.example.clash_flash;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class contar_cuatro extends AppCompatActivity {
     private static final String RESPUESTA_CORRECTA = "4";
+    private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer2;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,8 @@ public class contar_cuatro extends AppCompatActivity {
 
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
+        mediaPlayer = MediaPlayer.create(this, R.raw.perf);
+        mediaPlayer2=MediaPlayer.create(this,R.raw.equivocado);
 
         ImageButton btnAnterior = findViewById(R.id.btnatras);
         ImageButton btnSiguiente = findViewById(R.id.btnsig);
@@ -65,10 +70,29 @@ public class contar_cuatro extends AppCompatActivity {
         if (respuestaUsuario.equalsIgnoreCase(RESPUESTA_CORRECTA)) {
             // La respuesta es correcta
             mostrarMensaje("¡Respuesta Correcta!");
+            if (mediaPlayer != null) {
+                mediaPlayer.start();
+            }
         } else {
             // La respuesta es incorrecta
             mostrarMensaje("Respuesta Incorrecta, intenta de nuevo.");
+            if (mediaPlayer2 != null) {
+                mediaPlayer2.start();
+            }
         }
+    }
+    @Override
+    protected void onDestroy() {
+        // Liberar recursos del MediaPlayer
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+
+        if (mediaPlayer2 != null) {
+            mediaPlayer2.release();
+        }
+
+        super.onDestroy();
     }
 
     private void mostrarMensaje(String mensaje) {

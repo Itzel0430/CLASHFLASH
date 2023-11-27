@@ -2,6 +2,7 @@ package com.example.clash_flash;
 
 
 import android.content.Intent;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -15,8 +16,9 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    private MediaPlayer mediaPlayer;
+    private MediaPlayer musicaFondo;
     private boolean isPlaying = false;
+
 
 
 
@@ -25,16 +27,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // iniciarReproduccion();
+        ImageButton btnReproducir = findViewById(R.id.btnmusic);
+        iniciarReproduccion();
 
 
         // Obtener referencia al botón
-        Button vistNum =findViewById(R.id.btn1234);
-        Button vistaCol=findViewById(R.id.btncolores);
-        Button vistaCont=findViewById(R.id.btncontar);
-        Button vistaAbc=findViewById(R.id.btnabec);
-
-
+        Button vistNum = findViewById(R.id.btn1234);
+        Button vistaCol = findViewById(R.id.btncolores);
+        Button vistaCont = findViewById(R.id.btncontar);
+        Button vistaAbc = findViewById(R.id.btnabec);
 
 
 
@@ -50,23 +51,22 @@ public class MainActivity extends AppCompatActivity {
 
         });
         vistaAbc.setOnClickListener(view -> {
-            Intent intent =new Intent(MainActivity.this, letra_a.class);
+            Intent intent = new Intent(MainActivity.this, letra_a.class);
 
             startActivity(intent);
 
         });
         vistaCont.setOnClickListener(view -> {
-            Intent intent =new Intent(MainActivity.this, contar_dos.class);
+            Intent intent = new Intent(MainActivity.this, contar_dos.class);
 
             startActivity(intent);
         });
         vistaCol.setOnClickListener(view -> {
-            Intent intent =new Intent(MainActivity.this, color_ama.class);
+            Intent intent = new Intent(MainActivity.this, color_ama.class);
 
             startActivity(intent);
         });
 
-        ImageButton btnReproducir = findViewById(R.id.btnmusic);
         btnReproducir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void iniciarReproduccion() {
-        if (mediaPlayer == null) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.musicafondo);
+        if (musicaFondo == null) {
+            musicaFondo = MediaPlayer.create(this, R.raw.musicafondo);
 
             // Configurar un listener para manejar el final de la reproducción
-            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            musicaFondo.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
                     // La reproducción ha terminado
@@ -95,14 +95,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Comenzar o reanudar la reproducción
-        mediaPlayer.start();
+        musicaFondo.start();
         isPlaying = true;
 
     }
-
     private void pausarReproduccion() {
-        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            mediaPlayer.pause();
+        if (musicaFondo != null && musicaFondo.isPlaying()) {
+            musicaFondo.pause();
             isPlaying = false;
 
         }
@@ -119,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+
 
 
 

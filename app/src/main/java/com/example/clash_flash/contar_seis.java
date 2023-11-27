@@ -14,14 +14,16 @@ import androidx.appcompat.app.AppCompatActivity;
 public class contar_seis extends AppCompatActivity {
     private static final String RESPUESTA_CORRECTA = "6";
     private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contar_seis);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.perf);
+        mediaPlayer2=MediaPlayer.create(this,R.raw.equivocado);
 
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
@@ -72,10 +74,31 @@ public class contar_seis extends AppCompatActivity {
             // La respuesta es correcta
             
             mostrarMensaje("¡Respuesta Correcta!");
+
+            if (mediaPlayer != null) {
+                mediaPlayer.start();
+            }
         } else {
             // La respuesta es incorrecta
             mostrarMensaje("Respuesta Incorrecta, intenta de nuevo.");
+            if (mediaPlayer2 != null) {
+                mediaPlayer2.start();
+            }
+
         }
+    }
+    @Override
+    protected void onDestroy() {
+        // Liberar recursos del MediaPlayer
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+
+        if (mediaPlayer2 != null) {
+            mediaPlayer2.release();
+        }
+
+        super.onDestroy();
     }
 
 
