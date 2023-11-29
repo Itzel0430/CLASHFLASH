@@ -58,7 +58,7 @@ public class color_naranja  extends AppCompatActivity{
 
 
         // Inicializar el MediaPlayer con el archivo de audio
-        mediaPlayer = MediaPlayer.create(this, R.raw.color_amarillo);
+        mediaPlayer = MediaPlayer.create(this, R.raw.color_naranja);
         btnAudio = findViewById(R.id.btnAudioNaranja);
         btnAudio.setOnClickListener(view -> {
             if(mediaPlayer.isPlaying()){

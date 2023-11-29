@@ -57,7 +57,7 @@ public class letra_u extends AppCompatActivity {
 
 
         // Inicializar el MediaPlayer con el archivo de audio
-        mediaPlayer = MediaPlayer.create(this, R.raw.v_vaca);
+        mediaPlayer = MediaPlayer.create(this, R.raw.u_unicornio);
         btnAudio = findViewById(R.id.btnAudioU);
         btnAudio.setOnClickListener(view -> {
             if(mediaPlayer.isPlaying()){
