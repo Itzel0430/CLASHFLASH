@@ -17,7 +17,7 @@ public class inicio extends AppCompatActivity {
             @Override
             public void run() {
                 // Crear un Intent para ir a la siguiente actividad
-                Intent intent = new Intent(inicio.this, MainActivity.class);
+                Intent intent = new Intent(inicio.this, LoginActivity.class);
                 startActivity(intent);
 
                 // Cerrar la actividad actual

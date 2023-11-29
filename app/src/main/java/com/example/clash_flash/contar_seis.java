@@ -1,6 +1,7 @@
 package com.example.clash_flash;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class contar_seis extends AppCompatActivity {
     private static final String RESPUESTA_CORRECTA = "6";
+    private static final String PUNTAJE_KEY = "puntaje";
+    private int puntaje;
     private MediaPlayer mediaPlayer;
     private MediaPlayer mediaPlayer2;
 
@@ -24,6 +27,9 @@ public class contar_seis extends AppCompatActivity {
 
         mediaPlayer = MediaPlayer.create(this, R.raw.perf);
         mediaPlayer2=MediaPlayer.create(this,R.raw.equivocado);
+        //recupera el puntaje guardado
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        puntaje = preferences.getInt(PUNTAJE_KEY, 0);
 
         ImageButton init = findViewById(R.id.btnhoome);
         init.setOnClickListener(view -> finish());
@@ -74,19 +80,29 @@ public class contar_seis extends AppCompatActivity {
             // La respuesta es correcta
             
             mostrarMensaje("¡Respuesta Correcta!");
-
+            puntaje += 100;
             if (mediaPlayer != null) {
                 mediaPlayer.start();
             }
         } else {
             // La respuesta es incorrecta
             mostrarMensaje("Respuesta Incorrecta, intenta de nuevo.");
+            puntaje -= 20;
             if (mediaPlayer2 != null) {
                 mediaPlayer2.start();
             }
 
         }
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt(PUNTAJE_KEY, puntaje);
+        editor.apply();
+
+        Intent intent = new Intent(contar_seis.this, MainActivity.class);
+        intent.putExtra("PUNTAJE", puntaje);
+        startActivity(intent);
     }
+
     @Override
     protected void onDestroy() {
         // Liberar recursos del MediaPlayer

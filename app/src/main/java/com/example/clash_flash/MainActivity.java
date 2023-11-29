@@ -2,6 +2,7 @@ package com.example.clash_flash;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -29,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ImageButton btnReproducir = findViewById(R.id.btnmusic);
         iniciarReproduccion();
+
+        SharedPreferences preferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+        String username = preferences.getString("username", "Usuario");
+
+        // Mostrar el nombre de usuario en un TextView
+        TextView textViewUsername = findViewById(R.id.textViewNombreUsuario);
+        textViewUsername.setText("¡Bienvenido, " + username + "!");
+
 
 
         // Obtener referencia al botón
@@ -66,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
             startActivity(intent);
         });
+
 
         btnReproducir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 
 }
 
